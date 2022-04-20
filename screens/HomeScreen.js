@@ -1,4 +1,5 @@
 import { StyleSheet, Text, View } from 'react-native'
+import {SearchBar} from 'react-native-elements'
 import React from 'react'
 
 const HomeScreen = () => {
