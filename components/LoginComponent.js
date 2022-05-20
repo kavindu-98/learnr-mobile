@@ -5,11 +5,12 @@ import {
   StatusBar,
   KeyboardAvoidingView,
 } from 'react-native';
+
 import React, {useEffect, useState} from 'react';
 import {Input, Button} from 'react-native-elements';
 import axios from 'axios';
 
-const API_URL = 'http://192.168.1.107:8080/api/users/';
+const API_URL = 'http://192.168.1.107:8080/users/';
 
 const LoginComponent = ({navigation}) => {
   const [email, setEmail] = useState('');
@@ -62,7 +63,10 @@ const LoginComponent = ({navigation}) => {
         />
       </View>
 
-      <Button title="Login" onPress={register} />
+      <Button 
+        
+      
+      title="Login" onPress={register} />
     </KeyboardAvoidingView>
   );
 };

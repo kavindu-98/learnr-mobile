@@ -1,7 +1,13 @@
-import AuthScreen from "./AuthScreen";
+import LoginScreen from "./LoginScreen";
 import HomeScreen from "./HomeScreen";
+import WelcomeScreen from "./WelcomeScreen";
+import SignUpScreen from "./SignUpScreen";
 
 export {
-    AuthScreen,
-    HomeScreen
+    WelcomeScreen,
+    LoginScreen,
+    HomeScreen,
+    SignUpScreen
+    
+
 }

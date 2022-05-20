@@ -8,7 +8,7 @@ import {
 import React, {useEffect, useState} from 'react';
 import {Input, Button} from 'react-native-elements';
 
-const API_URL = 'http://192.168.1.107:8080/api/users/';
+const API_URL = 'http://192.168.1.107:8080/users/';
 
 const SignupComponent = ({navigation}) => {
   const [name, setName] = useState('');
