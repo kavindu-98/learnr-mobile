@@ -1,10 +1,16 @@
 import { StyleSheet, Text, View, Image } from 'react-native';
 import React from 'react';
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs"
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
+import { NavigationContainer } from "@react-navigation/native";
 import { COLORS, SIZES, FONTS, icons } from '../constants';
+
+// screens
 import {HomeScreen} from "../screens";
+import {ProfileScreen} from "../screens";
 
 const Tab = createBottomTabNavigator();
+
 
 const tabOptions = {
     showLabel : false,
@@ -13,13 +19,34 @@ const tabOptions = {
     }
 }
 
+
+
 const Tabs = () => {
   return (
    <Tab.Navigator 
+  
             tabBarOptions={tabOptions}
+            
         screenOptions={({ route }) => ({
+            
+                tabBarStyle:{
+                  backgroundColor:'#ffff',
+                  height: "8%",
+                  borderTopLeftRadius: 30,
+                  borderTopRightRadius: 30,
+                  shadowOffset: {
+                    width: 0,
+                    height: -0.5,
+                },
+                shadowOpacity: 0.6,
+                shadowRadius: 16.0,
+                elevation: 1,
+                },
+              
+              
             tabBarIcon: ({ focused }) => {
                 const tintColor = focused ? COLORS.primary : COLORS.black;
+                
 
                 switch (route.name) {
                     case "Home":
@@ -88,7 +115,7 @@ const Tabs = () => {
                 }
             }
         })}>
-             <Tab.Screen
+            <Tab.Screen
                 name="Home"
                 component={HomeScreen}
                 // options={{ headerShown: false}}
@@ -110,8 +137,7 @@ const Tabs = () => {
             />
             <Tab.Screen
                 name="Profile"
-                component={HomeScreen}
-                // component={ProfileScreen}
+                component={ProfileScreen}
                 // options={{ headerShown: false}}
             />
 
@@ -121,4 +147,7 @@ const Tabs = () => {
 
 export default Tabs;
 
-const styles = StyleSheet.create({})
+const styles = StyleSheet.create({
+
+   
+})
