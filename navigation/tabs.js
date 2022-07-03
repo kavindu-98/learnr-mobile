@@ -88,25 +88,31 @@ const Tabs = () => {
                 }
             }
         })}>
-            <Tab.Screen
+             <Tab.Screen
                 name="Home"
                 component={HomeScreen}
+                // options={{ headerShown: false}}
             />
             <Tab.Screen
                 name="Chat"
                 component={HomeScreen}
+                options={{ headerShown: false}}
             />
             <Tab.Screen
                 name="Add"
                 component={HomeScreen}
+                options={{ headerShown: false}}
             />
             <Tab.Screen
                 name="Notifications"
                 component={HomeScreen}
+                options={{ headerShown: false}}
             />
             <Tab.Screen
                 name="Profile"
                 component={HomeScreen}
+                // component={ProfileScreen}
+                // options={{ headerShown: false}}
             />
 
    </Tab.Navigator>
